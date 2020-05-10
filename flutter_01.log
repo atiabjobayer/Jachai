@@ -1,0 +1,91 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+ProcessException: ProcessException: Process exited abnormally:
+* daemon still not running
+error: cannot connect to daemon at tcp:5037: cannot connect to 127.0.0.1:5037: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. (10060)
+  Command: C:\Users\Sabir_Islam_Khan\AppData\Local\Android\sdk\platform-tools\adb.exe -s emulator-5554 shell am start -a android.intent.action.RUN -f 0x20000000 --ez enable-background-compilation true --ez enable-dart-profiling true --ez enable-checked-mode true --ez verify-entry-points true com.example.facial_recognition/com.example.facial_recognition.MainActivity
+
+```
+#0      RunResult.throwException (package:flutter_tools/src/base/process.dart:141:5)
+#1      _DefaultProcessUtils.run (package:flutter_tools/src/base/process.dart:275:19)
+<asynchronous suspension>
+#2      AndroidDevice.runAdbCheckedAsync (package:flutter_tools/src/android/android_device.dart:257:25)
+#3      AndroidDevice.startApp (package:flutter_tools/src/android/android_device.dart:605:34)
+<asynchronous suspension>
+#4      FlutterDevice.runHot (package:flutter_tools/src/resident_runner.dart:450:54)
+#5      _asyncThenWrapperHelper.<anonymous closure> (dart:async-patch/async_patch.dart:73:64)
+#6      _rootRunUnary (dart:async/zone.dart:1134:38)
+#7      _CustomZone.runUnary (dart:async/zone.dart:1031:19)
+#8      _FutureListener.handleValue (dart:async/future_impl.dart:139:18)
+#9      Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:680:45)
+#10     Future._propagateToListeners (dart:async/future_impl.dart:709:32)
+#11     Future._completeWithValue (dart:async/future_impl.dart:524:5)
+#12     _AsyncAwaitCompleter.complete (dart:async-patch/async_patch.dart:32:15)
+#13     _completeOnAsyncReturn (dart:async-patch/async_patch.dart:290:13)
+#14     ApplicationPackageFactory.getPackageForPlatform (package:flutter_tools/src/application_package.dart)
+#15     _asyncThenWrapperHelper.<anonymous closure> (dart:async-patch/async_patch.dart:73:64)
+#16     _rootRunUnary (dart:async/zone.dart:1134:38)
+#17     _CustomZone.runUnary (dart:async/zone.dart:1031:19)
+#18     _FutureListener.handleValue (dart:async/future_impl.dart:139:18)
+#19     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:680:45)
+#20     Future._propagateToListeners (dart:async/future_impl.dart:709:32)
+#21     Future._completeWithValue (dart:async/future_impl.dart:524:5)
+#22     _AsyncAwaitCompleter.complete (dart:async-patch/async_patch.dart:32:15)
+#23     _completeOnAsyncReturn (dart:async-patch/async_patch.dart:290:13)
+#24     AndroidApk.fromAndroidProject (package:flutter_tools/src/application_package.dart)
+#25     _asyncThenWrapperHelper.<anonymous closure> (dart:async-patch/async_patch.dart:73:64)
+#26     _rootRunUnary (dart:async/zone.dart:1134:38)
+#27     _CustomZone.runUnary (dart:async/zone.dart:1031:19)
+#28     _FutureListener.handleValue (dart:async/future_impl.dart:139:18)
+#29     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:680:45)
+#30     Future._propagateToListeners (dart:async/future_impl.dart:709:32)
+#31     Future._completeWithValue (dart:async/future_impl.dart:524:5)
+#32     Future._asyncComplete.<anonymous closure> (dart:async/future_impl.dart:554:7)
+#33     _rootRun (dart:async/zone.dart:1126:13)
+#34     _CustomZone.run (dart:async/zone.dart:1023:19)
+#35     _CustomZone.runGuarded (dart:async/zone.dart:925:7)
+#36     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:965:23)
+#37     _microtaskLoop (dart:async/schedule_microtask.dart:43:21)
+#38     _startMicrotaskLoop (dart:async/schedule_microtask.dart:52:5)
+#39     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#40     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:175:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, v1.12.13+hotfix.9, on Microsoft Windows [Version 6.3.9600], locale en-US)
+    • Flutter version 1.12.13+hotfix.9 at C:\flutter
+    • Framework revision f139b11009 (4 weeks ago), 2020-03-30 13:57:30 -0700
+    • Engine revision af51afceb8
+    • Dart version 2.7.2
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 29.0.2)
+    • Android SDK at C:\Users\Sabir_Islam_Khan\AppData\Local\Android\sdk
+    • Android NDK location not configured (optional; useful for native profiling support)
+    • Platform android-29, build-tools 29.0.2
+    • Java binary at: C:\Program Files\Android\Android Studio\jre\bin\java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_202-release-1483-b03)
+    • All Android licenses accepted.
+
+[✓] Android Studio (version 3.5)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin version 42.1.1
+    • Dart plugin version 191.8593
+    • Java version OpenJDK Runtime Environment (build 1.8.0_202-release-1483-b03)
+
+[✓] VS Code (version 1.44.2)
+    • VS Code at C:\Users\Sabir_Islam_Khan\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.9.1
+
+[✓] Connected device (1 available)
+    • Android SDK built for x86 • emulator-5554 • android-x86 • Android 5.1.1 (API 22) (emulator)
+
+• No issues found!
+```
