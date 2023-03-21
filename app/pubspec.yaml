@@ -28,7 +28,7 @@ dependencies:
   simple_animations:
   font_awesome_flutter:
   shared_preferences:
-  dio:
+  dio: any
   flutter_exif_rotation:
   image_picker:
   shadow:
